@@ -1,0 +1,17 @@
+extends ./main_layout
+block styles
+  link(rel="stylesheet", href="/index.css")
+block content
+    section.book-list
+      h2.book-list__header  Books
+      if books.length > 0
+        ul.book-list__items
+          each book in books
+            li.book-list_item
+              h3.book-list__title #{book.title}
+              //- img.book-list__image(src="http://static.lulu.com/cmsmedia/create-page/create_page_images_book.jpg", alt="Book Image")
+              //- p.book-list__desc #{book.description}
+              //- button.book-list__btn-buy Buy Now
+      else
+        h2.book-list__info No Books Found!
+          

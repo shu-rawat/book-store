@@ -1,0 +1,21 @@
+<%- include('./includes/head') %>
+<body>
+  <%- include('./includes/nav') %>
+  <section class="book-list">
+    <h2 class="book-list__header">Books</h2>
+    <% if(books.length > 0) { %>
+      <ul class="book-list__items">
+        <% for(let book of books){ %>
+          <li class="book-list_item">
+            <h3 class="book-list__title" id="book.title"> 
+              <%= book.title %>
+            </h3>
+          </li>
+        <% } %>
+      </ul>
+    <% } else { %>
+      <h2 class="book-list__info">No Books Found!</h2>
+    <% } %>
+  </section>
+</body>
+</html>

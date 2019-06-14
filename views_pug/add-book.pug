@@ -1,0 +1,10 @@
+extends ./main_layout
+block styles
+    link(rel="stylesheet", href="/index.css")
+block content
+      h1 Add Books
+      form(action="/add-book" method="POST")
+        div
+          label(for="name")
+          input(type="text", name="name")#name
+        button Add Book

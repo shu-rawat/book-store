@@ -1,0 +1,17 @@
+<section class="book-list">
+  <h2 class="book-list__header">Books</h2>
+  {{#if showBooks}}
+  <ul class="book-list__items">
+    {{#each books}}
+    <li class="book-list_item">
+      <h3 class="book-list__title" id="book.title">{{title}}</h3>
+      {{!-- img.book-list__image(src="http://static.lulu.com/cmsmedia/create-page/create_page_images_book.jpg", alt="Book Image") --}}
+      {{!-- p.book-list__desc #{book.description}
+              button.book-list__btn-buy Buy Now --}}
+    </li>
+    {{/each}}
+  </ul>
+  {{else}}
+  <h2 class="book-list__info">No Books Found!</h2>
+  {{/if}}
+</section>
